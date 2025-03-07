@@ -4,3 +4,6 @@ Scenario: Check the login to Customar account
     Given I open Automation Test store
     When I click on Account button
     Then I enter the username and Password
+
+Scenario: Login to Automation test store using command line
+    Given I lauch Automation test store
