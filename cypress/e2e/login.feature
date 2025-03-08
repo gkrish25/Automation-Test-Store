@@ -7,3 +7,4 @@ Scenario: Check the login to Customar account
 
 Scenario: Login to Automation test store using command line
     Given I lauch Automation test store
+    Then I navigate to Home page

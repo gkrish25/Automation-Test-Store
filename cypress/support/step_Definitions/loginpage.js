@@ -21,3 +21,8 @@ Then("I enter the username and Password",()=>{
 Given('I lauch Automation test store', () => {
     cy.logintoAutomationStore("Gnallasw", "Gokulash@25");
 })
+
+Then('I navigate to Home page', () => {
+    cy.get('.menu_home').click();
+    cy.get('.banner_container').should('be.visible');
+})
