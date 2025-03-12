@@ -22,7 +22,10 @@ Given('I lauch Automation test store', () => {
     cy.logintoAutomationStore("Gnallasw", "Gokulash@25");
 })
 
-Then('I navigate to Home page', () => {
-    cy.get('.menu_home').click();
-    cy.get('.banner_container').should('be.visible');
+When ("I MouseOver on the {string} and click {string}", (category,product)=>{
+    cy.get('#categorymenu').within(()=>{
+        cy.get('.categorymenu').find('a').contains(category).trigger('mouseover');
+        cy.get('.subcategories').find('a').contains(product).click({force:true});
+    })
+    
 })
